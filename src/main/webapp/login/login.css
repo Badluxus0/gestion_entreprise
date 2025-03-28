@@ -1,0 +1,179 @@
+/* Base styling */
+:root {
+    --primary-color: #4e73df;
+    --primary-hover: #3a5bd0;
+    --text-color: #495057;
+    --light-gray: #f8f9fc;
+    --medium-gray: #e2e6f3;
+    --dark-gray: #6c757d;
+    --success: #1cc88a;
+    --danger: #e74a3b;
+    --white: #fff;
+    --shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+p {
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: none !important;
+}
+
+/* Layout */
+.half {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    overflow: hidden;
+}
+
+.half .bg {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+@media (max-width: 991.98px) {
+    .half .bg {
+        display: none;
+    }
+}
+
+.half .contents {
+    flex: 1;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+@media (max-width: 991.98px) {
+    .half .contents {
+        width: 100%;
+    }
+}
+
+/* Form */
+.form-block {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 767.98px) {
+    .form-block {
+        padding: 2rem;
+        margin-top: 0;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--medium-gray) !important;
+    border-radius: 0.35rem;
+    background-color: var(--white) !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #bac8f3 !important;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25) !important;
+    outline: 0;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 100%;
+    font-weight: 600;
+    padding: 0.75rem;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.alert {
+    margin-top: 1.5rem;
+    border-radius: 0.35rem;
+}
+
+/* Logo and branding */
+.form-block .logo {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-block .logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-block {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Password strength indicator */
+.password-strength {
+    height: 5px;
+    margin-top: 5px;
+    background-color: var(--medium-gray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.password-strength-meter {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.strength-weak { width: 33.33%; background-color: var(--danger); }
+.strength-medium { width: 66.66%; background-color: #f6c23e; }
+.strength-strong { width: 100%; background-color: var(--success); }

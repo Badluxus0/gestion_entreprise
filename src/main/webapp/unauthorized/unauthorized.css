@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f9fa;
+}
+.unauthorized-container {
+    margin-top: 5rem;
+    max-width: 600px;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.icon-container {
+    font-size: 5rem;
+    color: #dc3545;
+    margin-bottom: 1.5rem;
+}
