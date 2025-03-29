@@ -37,7 +37,7 @@
             <form action="${pageContext.request.contextPath}/employees" method="get">
                 <div class="input-group">
                     <label>
-                        <input type="text" class="form-control" name="search" value="${param.search}"
+                        <input type="text" class="form-control" name="search"
                                placeholder="Rechercher un employé">
                     </label>
                     <input type="hidden" name="action" value="search">

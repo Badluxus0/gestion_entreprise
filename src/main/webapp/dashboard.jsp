@@ -45,7 +45,60 @@
     </div>
 
     <!-- Stats Cards -->
-    <!-- ... (les statistiques restent inchangées) ... -->
+    <div class="row mb-4">
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="stats-card card p-3">
+                <div class="d-flex align-items-center">
+                    <div class="stats-icon me-3">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <div class="stats-number">${employeeCount}</div>
+                        <div class="stats-text">Employés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="stats-card card p-3">
+                <div class="d-flex align-items-center">
+                    <div class="stats-icon me-3">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div>
+                        <div class="stats-number">${departmentCount}</div>
+                        <div class="stats-text">Départements</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="stats-card card p-3">
+                <div class="d-flex align-items-center">
+                    <div class="stats-icon me-3">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div>
+                        <div class="stats-number">${projectCount}</div>
+                        <div class="stats-text">Projets actifs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div class="stats-card card p-3">
+                <div class="d-flex align-items-center">
+                    <div class="stats-icon me-3">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div>
+                        <div class="stats-number">${taskCountInProgress}</div>
+                        <div class="stats-text">Tâches en cours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Quick Actions - Adaptées selon le rôle -->
     <div class="quick-actions mb-4">

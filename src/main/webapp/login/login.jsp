@@ -70,11 +70,6 @@
                                         <i class="fas fa-eye"></i>
                                     </button>
                                 </div>
-                                <div class="password-strength mt-2">
-                                    <div class="password-strength-meter" id="passwordStrengthMeter"></div>
-                                </div>
-                                <small class="form-text text-muted">Le mot de passe doit contenir au moins 8 caractères,
-                                    incluant des lettres et des chiffres</small>
                             </div>
                             <div class="form-group">
                                 <button
