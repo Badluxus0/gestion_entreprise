@@ -1,5 +1,6 @@
 🚀 Application de Gestion d’Entreprise
 
+
 📌 Description
 
 Ce projet est une application web développée dans le cadre du Master 2 ISI à l’ESMT.
@@ -7,9 +8,54 @@ Elle permet de gérer efficacement les employés, départements, projets et tâc
 
 L’objectif est de fournir une solution centralisée et flexible pour la gestion des ressources internes d’une organisation.
 
+
+🏗️ Architecture de l’application
+
+1. Backend (Jakarta EE)
+
+Entités JPA : Employee, Department, Project, Task
+
+Services (EJB Stateless) :
+
+DepartmentService (gestion des départements, affectation d’employés, etc.)
+
+EmployeeService
+
+ProjectService
+
+TaskService
+
+Utilisation directe de EntityManager (via @PersistenceContext) pour gérer la persistance.
+
+Pas de couche DAO supplémentaire : la logique métier et l’accès aux données sont regroupés dans les services.
+
+
+2. Frontend (Thymeleaf + Bootstrap)
+
+Thymeleaf pour générer les pages dynamiques côté serveur.
+
+Bootstrap pour un design responsive et moderne.
+
+Intégration avec les Servlets qui jouent le rôle de contrôleurs.
+
+
+3. Base de données (MySQL / PostgreSQL)
+
+Tables principales :
+
+employee
+
+department
+
+project
+
+task
+
+
+
 🛠️ Technologies utilisées
 
-Backend : Jakarta EE (Servlets, JPA, DAO, Services)
+Backend : Jakarta EE (Servlets, EJB, EntityManager, Services)
 
 Frontend : Thymeleaf + Bootstrap (HTML, CSS, JS)
 
